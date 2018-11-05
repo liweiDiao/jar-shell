@@ -1,4 +1,4 @@
-# jar.sh-
+# jar.sh
 linux 下 jar包启动脚本
 
 1、运行脚本：sh processing.sh start    
