@@ -3,7 +3,7 @@ linux 下 jar包启动脚本
 
 1、运行脚本：sh processing.sh start    
 如果运行shell脚本报错：    
-syntax error near unexpected token `{    
+syntax error near unexpected token \`{    
 `usage() {    
 
 可能是因为windows下编辑的文件，在linux下格式不一致的问题，
