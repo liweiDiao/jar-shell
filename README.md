@@ -57,4 +57,6 @@ cat -A processing.sh
 Usage: sh ִprocessing.sh [start|stop|restart|status]
 
 
+备注：经测试，发现linux上用户权限不够的话，可能start还会报错，生成log.out文件没有权限。所以执行该脚本需要对当前目录有权向的linux用户
+可以用 su username(linux账号)  切换到有权限的账号下执行该脚本
 
