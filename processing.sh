@@ -29,6 +29,7 @@ start(){
      echo "${APP_NAME} is already running. pid=${pid} ." 
    else 
      nohup java $JVM -jar  $APP_NAME > log.out 2>&1 &
+     echo "${APP_NAME} running. pid=$! ." 
    fi
 } 
 
