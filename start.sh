@@ -1,5 +1,5 @@
 #!/bin/bash
-# jar包
+# jar包路径
 APP_NAME=/data/app/data-1.0-SNAPSHOT/data-1.0-SNAPSHOT.jar
 JVM="-server -Xms2048m -Xmx2048m -XX:PermSize=128M -XX:MaxNewSize=128m -XX:MaxPermSize=256m -Djava.awt.headless=true -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled"
 
