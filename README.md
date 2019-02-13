@@ -1,14 +1,14 @@
 # jar.sh
 linux 下 jar包启动脚本
 
-# 1、运行脚本：sh processing.sh start    
+# 1、运行脚本：sh start.sh start    
 如果运行shell脚本报错：    
 syntax error near unexpected token \`{    
 `usage() {    
 
 可能是因为windows下编辑的文件，在linux下格式不一致的问题，
 # 2、可以运行以下命令查看文件：    
-cat -v processing.sh    
+cat -v start.sh    
 如果出现以下情况，说明文件格式有问题：    
 .....    
 is_exist(){^M    
@@ -23,7 +23,7 @@ is_exist(){^M
 ^M    
 ....      
 # 3、类似上面出现很多^M 代表有问题，需要进行将文件转换成linux下的文件格式，可以用以下命令：    
-dos2unix processing.sh    
+dos2unix start.sh    
 如果报错：bash:dos2unix:command not found    
 需要安装dos2unix    
 # 4、yum -y install dos2unix    
@@ -46,15 +46,15 @@ Installed:
 Complete!    
 
 # 5、继续运行命令：    
-dos2unix processing.sh    
+dos2unix start.sh    
 显示如下表示成功：    
-dos2unix: converting file processing.sh to UNIX format ...    
+dos2unix: converting file start.sh to UNIX format ...    
 
 # 6、用cat 查看文件格式，命令如下：    
-cat -A processing.sh    
+cat -A start.sh    
 文件中结尾没有^M 表示转换成功，    
-# 7、运行sh processing.sh 成功运行，显示：    
-Usage: sh ִprocessing.sh [start|stop|restart|status]
+# 7、运行sh start.sh 成功运行，显示：    
+Usage: sh start.sh [start|stop|restart|status]
 
 
 备注：经测试，发现linux上用户权限不够的话，可能start还会报错，生成log.out文件没有权限。所以执行该脚本需要对当前目录有权限的linux用户
