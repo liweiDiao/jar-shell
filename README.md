@@ -60,32 +60,32 @@ Usage: sh ִprocessing.sh [start|stop|restart|status]
 备注：经测试，发现linux上用户权限不够的话，可能start还会报错，生成log.out文件没有权限。所以执行该脚本需要对当前目录有权限的linux用户
 可以用命令    su username(linux账号)        切换到有权限的账号下执行该脚本
 
-# 配置assembly 打 tar包    
+# 8、配置assembly 打 tar包    
 pom.xml添加配置：    
- <plugin>    
-            <groupId>org.apache.maven.plugins</groupId>    
-            <artifactId>maven-assembly-plugin</artifactId>    
-            <executions>    
-                <execution>    
-                    <id>full</id>    
-                    <!-- 绑定到package生命周期阶段上 -->    
-                    <phase>package</phase>    
-                    <goals>    
-                        <!-- 只运行一次 -->    
-                        <goal>single</goal>    
-                    </goals>    
-                    <configuration>  
-                        <!-- 生成tar包时，不在tar包名后面追加assembly id -->    
-                        <appendAssemblyId>false</appendAssemblyId>    
-                        <!--描述文件路径-->    
-                        <descriptors>    
-                            <descriptor>src/main/assembly/assembly.xml</descriptor>    
-                        </descriptors>    
-                    </configuration>     
-                </execution>     
-            </executions>     
-        </plugin>     
-        
-        
-  
 
+<!-- 将jar包和外部配置等文件整体打包(zip,tar,tar.gz等) -->    
+            <plugin>    
+                <groupId>org.apache.maven.plugins</groupId>    
+                <artifactId>maven-assembly-plugin</artifactId>    
+                <executions>    
+                    <execution>    
+                        <id>full</id>    
+                        <!-- 绑定到package生命周期阶段上 -->    
+                        <phase>package</phase>    
+                        <goals>    
+                            <!-- 只运行一次 -->    
+                            <goal>single</goal>    
+                        </goals>    
+                        <configuration>  
+                            <!-- 生成tar包时，不在tar包名后面追加assembly id -->    
+                            <appendAssemblyId>false</appendAssemblyId>    
+                            <!--描述文件路径-->    
+                            <descriptors>    
+                                <descriptor>src/main/assembly/assembly.xml</descriptor>    
+                            </descriptors>    
+                        </configuration>     
+                    </execution>     
+                </executions>     
+            </plugin>     
+            
+            
