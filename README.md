@@ -87,6 +87,8 @@ pom.xml添加配置：
                         </configuration>     
                     </execution>     
                 </executions>     
-            </plugin>     
+            </plugin>         
+       
+参考assembly/assembly.xml   工程demo使用springboot，故assembly.xml是已springboot为例。    
             
             
