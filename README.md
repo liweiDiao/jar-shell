@@ -63,7 +63,8 @@ Usage: sh ִprocessing.sh [start|stop|restart|status]
 # 8、配置assembly 打 tar包    
 pom.xml添加配置：    
 
-<!-- 将jar包和外部配置等文件整体打包(zip,tar,tar.gz等) -->    
+< !-- 将jar包和外部配置等文件整体打包(zip,tar,tar.gz等) -->     
+
             <plugin>    
                 <groupId>org.apache.maven.plugins</groupId>    
                 <artifactId>maven-assembly-plugin</artifactId>    
